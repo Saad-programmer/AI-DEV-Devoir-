@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style={{width:"100vw",top:"0",position:"fixed",left:"0"}} >
+    <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" >
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <p className="m-0 fw-bold" style={{ fontSize: "25px" }}>
           <img src={logo} alt="Logo" style={{ height: "70px", width: "200px" }} />

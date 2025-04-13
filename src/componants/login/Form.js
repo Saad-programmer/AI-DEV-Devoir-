@@ -18,7 +18,8 @@ from 'mdb-react-ui-kit';
 
 function App() {
   return (
-    <MDBContainer className="my-5">
+    <div style={{width:"100vw",position:"relative",left:"0"}}>
+    <MDBContainer className="my-5" style={{top:"300px"}}>
 
       <MDBCard>
         <MDBRow className='g-0'>
@@ -59,6 +60,7 @@ function App() {
       </MDBCard>
 
     </MDBContainer>
+    </div>
   );
 }
 
