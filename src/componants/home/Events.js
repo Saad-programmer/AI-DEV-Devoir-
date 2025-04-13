@@ -17,7 +17,7 @@ const data = [
     event_name: 'AI in Modern Education',
     event_date: '2024-11-20',
     event_time: '14:00',
-    description: 'Explore how AI is transforming modern education and learn about latest tools and techniques.',
+    description: 'Explore how AI is transforming modern education.',
     ins_img: eventImage,
     instructor: 'Dr. Jane Smith',
     Level: 'Intermediate',
@@ -32,7 +32,7 @@ const data = [
     event_name: 'Web Development Bootcamp',
     event_date: '2024-12-05',
     event_time: '10:00',
-    description: 'A comprehensive bootcamp covering the fundamentals of web development using modern frameworks.',
+    description: 'A comprehensive bootcamp covering the fundamentals of web',
     ins_img: eventImage,
     instructor: 'John Doe',
     Level: 'Beginner',
@@ -47,7 +47,7 @@ const data = [
     event_name: 'Data Science Workshop',
     event_date: '2024-12-15',
     event_time: '09:00',
-    description: 'Dive into the world of data science with hands-on exercises and real-world case studies.',
+    description: 'Dive into the world of data science.',
     ins_img: eventImage,
     instructor: 'Emily Johnson',
     Level: 'Advanced',
@@ -62,7 +62,7 @@ const data = [
     event_name: 'Cybersecurity Fundamentals',
     event_date: '2024-12-22',
     event_time: '13:00',
-    description: 'Learn the basics of cybersecurity and how to protect your digital assets from threats.',
+    description: 'Learn the basics of cybersecurity',
     ins_img: eventImage,
     instructor: 'Michael Brown',
     Level: 'Beginner',
@@ -108,13 +108,13 @@ function Events() {
     titleColor: "blue"
   }));
 
-  const goToNext = () => {
-    sliderRef.current.slickNext();
-  };
+  // const goToNext = () => {
+  //   sliderRef.current.slickNext();
+  // };
 
-  const goToPrev = () => {
-    sliderRef.current.slickPrev();
-  };
+  // const goToPrev = () => {
+  //   sliderRef.current.slickPrev();
+  // };
 
   return (
     <div className="container-fluid p-0 mb-4 position-relative">
@@ -145,7 +145,7 @@ function Events() {
                     </h5>
                     <h1
                       className="text-white"
-                      style={{ fontWeight: 'bold', fontSize: '3rem' }}
+                      style={{ fontWeight: 'bold', fontSize: '3rem', lineHeight: '1' }}
                       data-aos="fade-up"
                     >
                       {item.subtitle}
@@ -181,12 +181,12 @@ function Events() {
         ))}
       </Slider>
       <div className="carousel-navigation position-absolute" style={{ top: '50%', right: '20px', transform: 'translateY(-50%)' }}>
-        <button className="btn btn-nav btn-primary me-2" onClick={goToPrev} style={{ fontSize: '2rem', padding: '10px 20px', backgroundColor: 'rgba(255, 255, 255, 0.5)', border: 'none' }}>
+        {/* <button className="btn btn-nav btn-primary me-2" onClick={goToPrev} style={{ fontSize: '2rem', padding: '10px 20px', backgroundColor: 'rgba(255, 255, 255, 0.5)', border: 'none' }}>
           &lt;
         </button>
         <button className="btn btn-nav btn-primary" onClick={goToNext} style={{ fontSize: '2rem', padding: '10px 20px', backgroundColor: 'rgba(255, 255, 255, 0.5)', border: 'none' }}>
           &gt;
-        </button>
+        </button> */}
       </div>
     </div>
   );

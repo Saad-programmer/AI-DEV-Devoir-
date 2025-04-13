@@ -7,9 +7,6 @@ import { Link } from 'react-router-dom';
 // Import slick-carousel styles
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../../style/index.css';
-import '../../style/style.css';
-import '../../style/style2.css';
 
 // Import AOS
 import AOS from 'aos';
@@ -41,8 +38,8 @@ function Carousel() {
     {
       imgSrc: carousel,
       title: "E-learning platform from AI&DEV",
-      subtitle: "Learn Job ready skills from our courses and formations with certificates",
-      description: "Explore a wide range of courses designed to enhance your expertise in technology, business, arts, and more. Start learning today!",
+      subtitle: "Learn Job ready skills from our courses",
+      description: "Explore a wide range of courses designed to enhance your expertise",
       button1Text: "Read More",
       button1Link: "/about",
       button2Text: "Join Now",
@@ -53,7 +50,7 @@ function Carousel() {
       imgSrc: carousel2,
       title: "Welcome to AI&DEV",
       subtitle: "Be a Part Of OUR Community",
-      description: "Engage with interactive activities, workshops, and projects. Experience hands-on learning that keeps you motivated and inspired.",
+      description: "Engage with interactive activities, workshops, and projects.",
       button1Text: "Read More",
       button1Link: "/about",
       button2Text: "Join Now",
@@ -62,13 +59,13 @@ function Carousel() {
     }
   ];
 
-  const goToNext = () => {
-    sliderRef.current.slickNext();
-  };
+  // const goToNext = () => {
+  //   sliderRef.current.slickNext();
+  // };
 
-  const goToPrev = () => {
-    sliderRef.current.slickPrev();
-  };
+  // const goToPrev = () => {
+  //   sliderRef.current.slickPrev();
+  // };
 
   return (
     <div className="container-fluid p-0 mb-4 position-relative">
@@ -90,16 +87,16 @@ function Carousel() {
               <div className="container">
                 <div className="row justify-content-start">
                   <div className="col-sm-10 col-lg-8">
-                    <h5
+                    <h3
                       className="text-uppercase mb-3"
-                      style={{ color: item.titleColor, fontWeight: 'bold', fontSize: '1.5rem' }}
-                      data-aos="fade-in" // AOS animation class
+                      style={{ color: item.titleColor, fontSize: '1.5rem' }}
+                      data-aos="fade-up" // AOS animation class
                     >
                       {item.title}
-                    </h5>
+                    </h3>
                     <h1
                       className="text-white"
-                      style={{ fontWeight: 'bold', fontSize: '3rem' }}
+                      style={{ fontSize: '3rem', lineHeight: '1' }}
                       data-aos="fade-up"
                     >
                       {item.subtitle}
@@ -135,12 +132,7 @@ function Carousel() {
         ))}
       </Slider>
       <div className="carousel-navigation position-absolute" style={{ top: '50%', right: '20px', transform: 'translateY(-50%)' }}>
-        <button className="btn btn-nav btn-primary me-2" onClick={goToPrev} style={{ fontSize: '2rem', padding: '10px 20px', backgroundColor: 'rgba(255, 255, 255, 0.5)', border: 'none' }}>
-          &lt;
-        </button>
-        <button className="btn btn-nav btn-primary" onClick={goToNext} style={{ fontSize: '2rem', padding: '10px 20px', backgroundColor: 'rgba(255, 255, 255, 0.5)', border: 'none' }}>
-          &gt;
-        </button>
+        
       </div>
     </div>
   );
