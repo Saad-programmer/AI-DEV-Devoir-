@@ -104,7 +104,7 @@ function Events() {
     button1Text: "Read More",
     button1Link: "/about",
     button2Text: "Join Now",
-    button2Link: "/login",
+    button2Link: "/eventForms",
     titleColor: "blue"
   }));
 

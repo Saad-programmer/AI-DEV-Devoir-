@@ -12,6 +12,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Inscription from './pages/Inscription';
+import Event_sub from './pages/Event_sub';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/inscription' element={<Inscription/>}/>
+        <Route path='/eventForms' element={<Event_sub/>}/>
       </Routes>
     </>
   );

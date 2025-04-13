@@ -3,10 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './EventForm.css'; // Assuming you save the custom CSS in this file
+import eventImage from '../../img/upload/event.png';
+
 
 const EventForm = () => {
     return (
         <div className="wrapper">
+            <div className="image-holder">
+                    <img src={eventImage} alt="Event" />
+                </div>
             <div className="inner animate__animated animate__fadeIn">
                 <form>
                     <h3 className="text-center mb-4">Set The Event</h3>
@@ -45,9 +50,7 @@ const EventForm = () => {
                     </div>
                     <button type="submit">Send your booking</button>
                 </form>
-                <div className="image-holder">
-                    <img src="images/registration-form-5.jpg" alt="Event" />
-                </div>
+                
             </div>
         </div>
     );
