@@ -98,7 +98,7 @@ function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="container" data-aos="fade-up" data-aos-delay="400">
+      <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="copyright">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
