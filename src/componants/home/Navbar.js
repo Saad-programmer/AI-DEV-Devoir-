@@ -7,7 +7,7 @@ import '../../style/style.css';
 import '../../style/style2.css';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ activePage }) {
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(true);
 
   // Function to toggle the navbar
@@ -16,7 +16,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg  navbar-light  sticky-top p-0">
+    <nav className={` navbar navbar-expand-lg navbar-light sticky-top p-0 ${isNavbarCollapsed ? '' : 'show'}`}>
       <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <p className="m-0 fw-bold" style={{ fontSize: "25px" }}>
           <img src={logo} alt="Logo" style={{ height: "70px", width: "200px" }} />
@@ -36,19 +36,19 @@ function Navbar() {
 
       <div className={`collapse navbar-collapse ${isNavbarCollapsed ? '' : 'show'}`} id="navbarCollapse">
         <div className="navbar-nav ms-auto p-4 p-lg-0">
-          <Link to="/" className="nav-item nav-link active">Home</Link>
-          <Link to="/about" className="nav-item nav-link">About</Link>
-          <Link to="/events" className="nav-item nav-link">Events</Link>
-          <Link to="/courses" className="nav-item nav-link">Courses</Link>
+          <Link to="/" className={`nav-item nav-link ${activePage === 'home' ? 'active' : ''}`}>Home</Link>
+          <Link to="/about" className={`nav-item nav-link ${activePage === 'about' ? 'active' : ''}`}>About</Link>
+          <Link to="/events" className={`nav-item nav-link ${activePage === 'events' ? 'active' : ''}`}>Events</Link>
+          <Link to="/courses" className={`nav-item nav-link ${activePage === 'courses' ? 'active' : ''}`}>Courses</Link>
           <div className="nav-item dropdown">
             <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</Link>
             <div className="dropdown-menu fade-down m-0">
-              <Link to="/team" className="dropdown-item">Our Team</Link>
-              <Link to="/projects" className="dropdown-item">Projects</Link>
+              <Link to="/team" className={`dropdown-item ${activePage === 'team' ? 'active' : ''}`}>Our Team</Link>
+              <Link to="/projects" className={`dropdown-item ${activePage === 'projects' ? 'active' : ''}`}>Projects</Link>
             </div>
           </div>
-          <Link to="/contact" className="nav-item nav-link">Contact</Link>
-          <Link to="/login" className="nav-item nav-link">Login <i className="fa fa-user"></i></Link>
+          <Link to="/contact" className={`nav-item nav-link ${activePage === 'contact' ? 'active' : ''}`}>Contact</Link>
+          <Link to="/login" className={`nav-item nav-link ${activePage === 'Login' ? 'active' : ''}`}>Login <i className="fa fa-user"></i></Link>
         </div>
       </div>
     </nav>

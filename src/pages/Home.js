@@ -15,7 +15,7 @@ import Footer from '../componants/home/Footer';
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar activePage="home" />
       <Carousel />
       <Events/>
       <Service/>

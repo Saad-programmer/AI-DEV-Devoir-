@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../componants/projects/Navbar'
+import Navbar from '../componants/home/Navbar'
 import ProjetHeader from '../componants/projects/Header'
 import Footer from '../componants/home/Footer'
 import ApplyAsMember from '../componants/projects/Apply'
@@ -10,7 +10,7 @@ import MemberRequirements from '../componants/projects/Require'
 function Projects() {
   return (
     <>
-        <Navbar/>
+        <Navbar activePage="projects"/>
         <ProjetHeader/>
         <ApplyAsMember/>
         <LearningHub/>
